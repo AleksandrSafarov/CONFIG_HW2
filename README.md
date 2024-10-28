@@ -123,4 +123,4 @@ python -m unittest test.py
 
 ## Тестирование
 Рисунок 1. Пример построенного графа
-![Image alt](https://github.com/AleksandrSafarov/CONFIG_HW1/blob/main/CONFIG_HW2/graph_test.png)
+![Image alt](https://github.com/AleksandrSafarov/CONFIG_HW2/blob/main/graph_test.png)
