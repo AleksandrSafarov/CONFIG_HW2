@@ -82,10 +82,12 @@ def generate_plantuml(commit_graph):
     plantuml_lines = ["@startuml"]
 
     # Обеспечение зависимостей от ранних к поздним коммитам путем итерации по порядку
+    i = 1
     for commit, parents in commit_graph.items():
         if parents:
             for parent in parents:
-                plantuml_lines.append(f"{parent} --> {commit}")
+                plantuml_lines.append(f"\"{parent} ({i})\" --> \"{commit} ({i+1})\"")
+                i+=1
     
     plantuml_lines.append("@enduml")
     return "\n".join(plantuml_lines)

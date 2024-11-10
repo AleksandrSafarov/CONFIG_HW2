@@ -46,7 +46,7 @@ commit message
         }
         plantuml_text = generate_plantuml(commit_graph)
         self.assertIn("@startuml", plantuml_text)
-        self.assertIn("abcd1234 --> efgh5678", plantuml_text)
+        self.assertIn("\"abcd1234 (1)\" --> \"efgh5678 (2)\"", plantuml_text)
         self.assertIn("@enduml", plantuml_text)
 
     @patch("builtins.open", new_callable=mock_open)
